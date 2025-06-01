@@ -1,7 +1,7 @@
 import { Given, When, Then, setDefaultTimeout } from "@cucumber/cucumber";
 
 import { expect } from "@playwright/test";
-import { fixture } from "../../src/hooks/pageFixture";
+import { fixture } from "../../hooks/pageFixture";
 
 setDefaultTimeout(60 * 1000 * 2)
 

@@ -1,10 +1,10 @@
 import { BeforeAll, AfterAll, Before, After, Status } from "@cucumber/cucumber";
 import { Browser, BrowserContext } from "@playwright/test";
 import { fixture } from "./pageFixture";
-import { invokeBrowser } from "../../helper/browsers/browserManager";
-import { getEnv } from "../../helper/env/env";
+import { invokeBrowser } from "../helper/browsers/browserManager";
+import { getEnv } from "../helper/env/env";
 import { createLogger } from "winston";
-import { options } from "../../helper/util/logger";
+import { options } from "../helper/util/logger";
 const fs = require("fs-extra");
 
 let browser: Browser;
@@ -87,9 +87,9 @@ AfterAll(async function () {
 
 function getStorageState(user: string): string | { cookies: { name: string; value: string; domain: string; path: string; expires: number; httpOnly: boolean; secure: boolean; sameSite: "Strict" | "Lax" | "None"; }[]; origins: { origin: string; localStorage: { name: string; value: string; }[]; }[]; } {
     if (user.endsWith("admin"))
-        return "src/helper/auth/admin.json";
+        return "helper/auth/admin.json";
     else if (user.endsWith("lead"))
-        return "src/helper/auth/lead.json";
+        return "helper/auth/lead.json";
 }
 
 

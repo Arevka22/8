@@ -3,7 +3,7 @@ import { Given, When, Then, setDefaultTimeout } from "@cucumber/cucumber";
 setDefaultTimeout(60 * 1000 * 2)
 
 import { expect } from "@playwright/test";
-import { fixture } from "../../src/hooks/pageFixture";
+import { fixture } from "../../hooks/pageFixture";
 
 
 Given('user search for a {string}', async function (book) {
